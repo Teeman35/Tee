@@ -1,0 +1,11 @@
+$query = "SELECT * FROM table_name WHERE code = '$code'";
+$res = mysql_query($query);
+if ($res) {
+  if (mysql_num_rows($res) > 0) {
+    echo 'exist!';
+  } else {
+    echo 'not exist';
+  }
+} else {
+  echo 'Error: '.mysql_error();
+}
