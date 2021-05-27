@@ -1,0 +1,42 @@
+//Convert YYYY-MM-DD to DD-MM-YYYY
+ <?php  
+    $oDate = "2021-05-20";  
+    $newDate = date("d-m-Y", strtotime($oDate));  
+    echo "New date format is: ".$newDate. " (MM-DD-YYYY)";  
+ 
+
+//Convert YYYY-MM-DD to MM-DD-YYYY
+  $oDate = "2021-05-20";  
+    $newDate = date("m-d-Y", strtotime($oDate));  
+    echo "New date format is: ".$newDate. " (MM-DD-YYYY)";  
+ 
+
+//Convert DD-MM-YYYY to YYYY-MM-DD
+    $oDate = "20-05-2021";  
+    $newDate = date("Y-m-d", strtotime($oDate));  
+    echo "New date format is: ".$newDate. " (YYYY-MM-DD)";  
+
+
+//Convert DD-MM-YYYY to YYYY/MM/DD
+    $oDate = "20-05-2021";  
+    $date = str_replace('-"', '/', $oDate);  
+    $newDate = date("Y/m/d", strtotime($date));  
+    echo "New date format is: ".$newDate. " (YYYY/MM/DD)";  
+
+
+//Convert Date Time to A Different Format  
+   $date = "05/20/2021 01:36 AM";  
+
+    //converts date and time to seconds  
+    $sec = strtotime($date);  
+
+    //converts seconds into a specific format  
+    $newdate = date ("Y/d/m H:i", $sec);  
+
+   //Appends seconds with the time  
+     $newdate = $newdate . ":00";  
+
+   // display converted date and time 
+   echo "New date time format is: ".$newDate; 
+   //END
+ ?>
